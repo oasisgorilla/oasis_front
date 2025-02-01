@@ -3,9 +3,9 @@ import axios from 'axios';
 
 const API_BASE_URL = 'http://localhost:8000/api/bible';
 
-export const fetchBibleVerse = async (book: string, chapter: number, verse: number) => {
+export const fetchBibleChapter = async (book: string, chapter: number) => {
   try {
-    const response = await axios.get(`${API_BASE_URL}/${book}/${chapter}/${verse}/`);
+    const response = await axios.get(`${API_BASE_URL}/${book}/${chapter}/`); // 장만 가져오도록 함
     return response.data;
   } catch (error) {
     console.error('Error fetching Bible verse:', error);
