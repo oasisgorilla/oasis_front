@@ -1,7 +1,7 @@
 // src/api.ts
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:8000/api/bible';
+const API_BASE_URL = 'http://oasisgorilla.ddns.net:8000/api/bible';
 
 export const fetchBibleChapter = async (book: string, chapter: number) => {
   try {
