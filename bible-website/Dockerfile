@@ -14,4 +14,4 @@ RUN npm run build
 EXPOSE 5173
 
 # 프론트엔드 실행
-CMD ["npm", "run", "start"]
+CMD ["npm", "run", "preview"]
