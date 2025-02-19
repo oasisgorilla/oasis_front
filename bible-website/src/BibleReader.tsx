@@ -44,7 +44,7 @@ const BibleReader = () => {
 
   return (
     <div className="p-6">
-      <h1 className="text-3xl font-bold">📖 J316</h1>
+      <h1 className="text-3xl font-bold">📖 oasis bible</h1>
 
       {/* 성경 책 선택 */}
       <div>
