@@ -1,0 +1,28 @@
+/* BibleReader.css */
+
+.reader-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .reader-content {
+    flex: 1;
+    padding: 1.5rem;
+    overflow-y: auto;
+    background-color: #fff;
+  }
+  
+  .reader-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .reader-verse {
+    margin-bottom: 0.5rem;
+  }
+  
+  .reader-verse strong {
+    margin-right: 0.25rem;
+  }
+  

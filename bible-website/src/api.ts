@@ -2,6 +2,7 @@
 import axios from 'axios';
 
 const API_BASE_URL = 'http://oasisgorilla.ddns.net:8000/api/bible';
+// const API_BASE_URL = 'http://127.0.0.1:8000/api/bible'; // 로컬
 
 export const fetchBibleChapter = async (book: string, chapter: number) => {
   try {

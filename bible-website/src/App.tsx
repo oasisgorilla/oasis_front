@@ -1,4 +1,5 @@
 import BibleReader from "./BibleReader";
+import "./App.css";
 
 const App = () => {
   return (
