@@ -8,7 +8,9 @@ import {
 } from "./features/bible/bibleSlice";
 import type { RootState, AppDispatch } from "./app/store";
 import Toolbar from "./Toolbar.tsx";
+import ChatAssistant from "./ChatAssistant";
 import "./BibleReader.css";
+import "./ChatAssistant.css";
 
 const BibleReader = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -67,6 +69,7 @@ const BibleReader = () => {
           </div>
         )}
       </div>
+      <ChatAssistant />
     </div>
   );
 };
