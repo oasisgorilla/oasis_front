@@ -1,7 +1,8 @@
-
-
-
 /* App.css */
+
+.banner {
+  border-bottom: 1px solid #ddd;
+}
 
 body {
   margin: 0;

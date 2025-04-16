@@ -51,7 +51,6 @@ const BibleReader = () => {
         fetchVerses={() => dispatch(loadVerses({ book, chapter }))}
       />
       <div className="reader-content">
-        <h1 className="reader-title">📖 oasis bible</h1>
         {loading ? (
           <p>⏳ 로딩 중...</p>
         ) : (
