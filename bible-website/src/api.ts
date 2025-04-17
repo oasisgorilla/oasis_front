@@ -20,7 +20,7 @@ export const fetchLlamaResponse = async (text: string) => {
     const response = await axios.post(`${API_BASE_URL}/chat/`, {
       prompt: text, // input 데이터를 포함
     });
-    return response.data.reply; // 챗봇 응답
+    return response.data.response; // 응답이 'response'로 전달됨
   } catch (error) {
     console.error("Error fetching llama response:", error);
     throw error;
