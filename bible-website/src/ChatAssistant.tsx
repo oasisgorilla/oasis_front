@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { fetchLlamaResponse } from "./api";
 import "./ChatAssistant.css";
 
 interface Message {
@@ -20,16 +21,12 @@ const ChatAssistant = () => {
     setLoading(true);
 
     try {
-      const res = await fetch("/api/llama", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ messages: [...messages, userMessage] }),
-      });
+      // 백엔드에 Bible verse 데이터와 함께 요청을 보내고, 챗봇의 응답을 받음
+      const response = await fetchLlamaResponse(input);
 
-      const data = await res.json();
       const assistantMessage: Message = {
         role: "assistant",
-        content: data.reply,
+        content: response,
       };
 
       setMessages((prev) => [...prev, assistantMessage]);

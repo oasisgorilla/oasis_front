@@ -1,15 +1,28 @@
 // src/api.ts
 import axios from 'axios';
 
-const API_BASE_URL = 'http://oasisgorilla.ddns.net:8000/api/bible';
+const API_BASE_URL = 'http://oasisgorilla.ddns.net:8000/api';
 // const API_BASE_URL = 'http://127.0.0.1:8000/api/bible'; // 로컬
 
 export const fetchBibleChapter = async (book: string, chapter: number) => {
   try {
-    const response = await axios.get(`${API_BASE_URL}/${book}/${chapter}/`); // 장만 가져오도록 함
+    const response = await axios.get(`${API_BASE_URL}/bible/${book}/${chapter}/`); // 장만 가져오도록 함
     return response.data;
   } catch (error) {
     console.error('Error fetching Bible verse:', error);
+    throw error;
+  }
+};
+
+// 챗봇 응답을 가져오는 API
+export const fetchLlamaResponse = async (text: string) => {
+  try {
+    const response = await axios.post(`${API_BASE_URL}/chat/`, {
+      prompt: text, // input 데이터를 포함
+    });
+    return response.data.reply; // 챗봇 응답
+  } catch (error) {
+    console.error("Error fetching llama response:", error);
     throw error;
   }
 };
